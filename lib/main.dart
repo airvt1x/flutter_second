@@ -94,13 +94,21 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Center(
-              child: Container(width: 400, height: 50, 
-              decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(5), ),
-              child: Center(child:
-               TextButton(onPressed: (){}, child: const Text('Войти', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-              ),
-              ),
+              child: Container(
+                width: 400,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue,
+                    padding: const EdgeInsets.all(16),
+                    textStyle: const TextStyle(fontSize: 16,),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Войти'),
+                ),
               ),
             ),
           ),
@@ -115,7 +123,7 @@ class HomePage extends StatelessWidget {
                     foregroundColor: Colors.blue,
                     backgroundColor: Colors.white,
                     padding: const EdgeInsets.all(16),
-                    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
+                    textStyle: const TextStyle(fontSize: 16,),
                     side: const BorderSide(color: Colors.blue),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
